@@ -10,7 +10,7 @@ import { setupAssociations } from './db/associations';
 import { setupSwagger } from './swagger';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 setupSwagger(app);
@@ -32,10 +32,12 @@ const startServer = async () => {
     app.use(errors());
 
     app.listen(PORT, () => {
-      console.log(`Server is running on http://localhost:${PORT}`);
+      console.log(
+        `Server is running on http://ec2-18-221-59-90.us-east-2.compute.amazonaws.com:${PORT}`
+      );
     });
   } catch (error) {
-    console.error('MySQL Falhou:', error);
+    console.error('conection error:', error);
   }
 };
 
