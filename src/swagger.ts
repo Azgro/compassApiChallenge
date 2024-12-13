@@ -13,7 +13,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://ec2-18-221-59-90.us-east-2.compute.amazonaws.com:8080',
+        url: 'localhost:8080',
         description: 'EC2 server',
       },
     ],
