@@ -33,7 +33,7 @@ const startServer = async () => {
 
     app.listen(PORT, () => {
       console.log(
-        `Server is running on http://ec2-18-221-59-90.us-east-2.compute.amazonaws.com:${PORT}`
+        `localhost:${PORT}`
       );
     });
   } catch (error) {
